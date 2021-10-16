@@ -1,10 +1,11 @@
 const express = require("express")
 const app = express()
 const mongoose = require('mongoose')
-const dotenv = require("dotenv").config()
+require("dotenv").config()
 const helmet = require("helmet")
 const morgan = require("morgan")
 const userRoute = require('./routes/users')
+const authRoute = require('./routes/auth')
 
 
 // CONFIGURING MONGO DB
@@ -21,12 +22,15 @@ app.use(express.json())
 app.use(helmet())
 app.use(morgan("common"))
 
+
 // CONNECTING THE ROUTES
-app.use("api/user", userRoute)
+app.use("/api/users", userRoute)
+app.use("/api/auth", authRoute)
 
 
 
 // SETTING THE PORT
-app.listen(8800, ()=> {
-    console.log("Backend server is running")
+const PORT = process.env.PORT || 8800
+app.listen(PORT, () => {
+    console.log('Server is running on port', PORT)
 })
