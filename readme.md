@@ -1,3 +1,3 @@
 # MERN Stack - Social Media App
 
-## Ayodeji Oladimeji [Layobright]
+### Author : Ayodeji Oladimeji [Layobright]
