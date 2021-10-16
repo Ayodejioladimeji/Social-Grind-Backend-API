@@ -1,8 +1,10 @@
-const router = require('express').Router()
+const router = require("express").Router()
+// const User = require("../models/User")
 
 
-router.get("/", (req, res) => {
-    res.send("users route has been created")
+// REGISTER THE USER
+router.get("/", async (req, res) => {
+    
 })
 
 module.exports = router
