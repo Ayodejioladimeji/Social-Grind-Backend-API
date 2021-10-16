@@ -6,6 +6,7 @@ const helmet = require("helmet")
 const morgan = require("morgan")
 const userRoute = require('./routes/users')
 const authRoute = require('./routes/auth')
+const postsRoute = require('./routes/posts')
 
 
 // CONFIGURING MONGO DB
@@ -26,6 +27,7 @@ app.use(morgan("common"))
 // CONNECTING THE ROUTES
 app.use("/api/users", userRoute)
 app.use("/api/auth", authRoute)
+app.use("/api/posts", postsRoute)
 
 
 
