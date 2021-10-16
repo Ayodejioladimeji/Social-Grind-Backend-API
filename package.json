@@ -4,7 +4,8 @@
   "description": "A social application with grind",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [
     "grind",
@@ -21,6 +22,6 @@
     "helmet": "^4.6.0",
     "mongoose": "^6.0.11",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.13"
+    "nodemon": "2.0.10"
   }
 }
